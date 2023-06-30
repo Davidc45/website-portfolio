@@ -666,8 +666,28 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 640px){
+  .sm\:hidden{
+    display: none;
+  }
+}
+
 @media (min-width: 768px){
+  .md\:block{
+    display: block;
+  }
+
+  .md\:inline{
+    display: inline;
+  }
+
   .md\:hidden{
+    display: none;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:hidden{
     display: none;
   }
 }
