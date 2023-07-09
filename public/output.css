@@ -720,6 +720,18 @@ video {
   padding-left: 9rem;
 }
 
+.pl-5{
+  padding-left: 1.25rem;
+}
+
+.pl-24{
+  padding-left: 6rem;
+}
+
+.pl-48{
+  padding-left: 12rem;
+}
+
 .align-middle{
   vertical-align: middle;
 }
