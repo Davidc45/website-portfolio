@@ -24,7 +24,7 @@
 <body>
     <!--before pushing delete all public file parts of the directory-->
     <!--background image wrap-->
-    <div class="min-h-screen  bg-cover" style="background-image: url(images/Mushrooms\ -\ Copy@1-1920x1009.png);">
+    <div class="min-h-screen bg-cover" style="background-image: url(images/My\ project-1.jpg);">
         <div class="p-6 cursor-pointer text-primary-100 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -33,7 +33,7 @@
         <!--navbar start-->
         <nav id="navbar" class="flex items-center fixed w-screen justify-center p-3 hover:text-primary-500">
             <img class="w-16 h-10 ml-24 mr-96 hidden md:block" src="images/letters yellow.png" alt="">
-            <ul class="flex-1 uppercase text-white text-2xl ml-96 pl-72">
+            <ul class="flex-1 uppercase text-white text-2xl ml-72 pl-72">
                 <li class="inline-block px-10"><a href="#home">home</a></li>
                 <li class="inline-block px-10"><a href="#about">about</a></li>
                 <li class="inline-block px-10"><a href="#">skills</a></li>
@@ -41,7 +41,7 @@
             </ul>
         </nav>
 
-        <div id="home" class="flex  items-center h-screen">
+        <div id="home" class="flex items-center h-screen pl-52">
             <div style="text-align: center;">
                 <h1 class="text-5xl font-body tracking-widest text-primary-100 " style="margin-bottom: 30px;">
                     David Calderon</h1>
@@ -49,11 +49,13 @@
             </div>
         </div>
     </div>
-    <div id="about" class="min-h-screen bg-fixed bg-cover" style="background-color: #374051;">
-        <div class="text-white " style="position: absolute; top: 130%; left: 10%;">
-            <h1 class="uppercase text-5xl mb-9">about</h1>
-            <div class="text-white flex">
-                <p class="">Hello! I'm David Calderon, a Computer Science student at Santa Ana College, with a
+    <div id="about" class="min-h-screen bg-fixed bg-cover bg-gray-800">
+        <div class="text-white items-center pt-80 pl-36">
+            <h1 class="uppercase text-5xl mb-9 ">about</h1>
+            <div class="text-white ">
+                <p class="max-w-2xl leading-10">Hello! I'm David Calderon, a Computer Science student at Santa Ana
+                    College,
+                    with a
                     planned
                     transfer to a four-year institution in the upcoming academic year. As a student with a passion for
                     technology and programming, I am seeking to expand my knowledge and skills through a back-end
@@ -71,7 +73,7 @@
             var navbar = document.getElementById('navbar');
             var secondBackgroundOffset = document.getElementById('about').offsetTop;
 
-            if (window.pageYOffset >= secondBackgroundOffset) {
+            if (window.pageYOffset >= secondBackgroundOffset - navbar.clientHeight) {
                 navbar.classList.add('navbar-black');
             } else {
                 navbar.classList.remove('navbar-black');
