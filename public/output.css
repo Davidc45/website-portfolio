@@ -802,6 +802,10 @@ video {
   padding-top: 24rem;
 }
 
+.pl-64{
+  padding-left: 16rem;
+}
+
 .text-center{
   text-align: center;
 }
