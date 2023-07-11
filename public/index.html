@@ -26,7 +26,7 @@
     <!--background image wrap-->
     <div class="min-h-screen " style="background-image:url(images/istockphoto-1194080385-640x640.jpg)">
         <!--navbar start-->
-        <nav id="navbar" class="flex justify-between items-center fixed font-body p-3 w-full">
+        <nav id="navbar" class="flex justify-between items-center fixed font-body p-5 w-full">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6  md:hidden">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -53,9 +53,21 @@
             </div>
         </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+        style="position: absolute; top: 67%; width: 100%; z-index: 1;">
+        <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="20%" y2="100%">
+                <stop offset="0%" style="stop-color:black;stop-opacity:0.90" />
+                <stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        <path fill="url(#gradient)" fill-opacity="1"
+            d="M0,64L48,80C96,96,192,128,288,160C384,192,480,224,576,224C672,224,768,192,864,186.7C960,181,1056,203,1152,197.3C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
 
     <div id="about" class="min-h-screen bg-fixed bg-cover bg-gray-800">
-        <div class="text-white items-center ">
+        <div class="flex items-center ">
             <h1 class="uppercase text-5xl mb-9 font-body">about</h1>
             <div class="text-white font-body">
                 <p class="max-w-2xl leading-10">Hello! I'm David Calderon, a Computer Science student at Santa Ana
