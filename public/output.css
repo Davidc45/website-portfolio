@@ -576,6 +576,14 @@ video {
   width: 100%;
 }
 
+.w-auto{
+  width: auto;
+}
+
+.w-96{
+  width: 24rem;
+}
+
 .max-w-2xl{
   max-width: 42rem;
 }
@@ -637,6 +645,10 @@ video {
   padding-top: 24rem;
 }
 
+.pt-80{
+  padding-top: 20rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -653,16 +665,6 @@ video {
 .text-5xl{
   font-size: 3rem;
   line-height: 1;
-}
-
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .uppercase{
@@ -685,16 +687,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-primary-300{
-  --tw-text-opacity: 1;
-  color: rgb(183 110 121 / var(--tw-text-opacity));
-}
-
-.text-primary-400{
-  --tw-text-opacity: 1;
-  color: rgb(100 65 165 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px){
