@@ -30,8 +30,8 @@
             <ul class="flex justify-end space-x-28 uppercase text-white text-2xl">
                 <li><a href="#home">home</a></li>
                 <li><a href="#about">about</a></li>
-                <li><a href="#">skills</a></li>
-                <li><a href="#">contact</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#projects">projects</a></li>
             </ul>
         </nav>
 
@@ -44,17 +44,17 @@
                 <p class="text-primary-100 uppercase tracking-widest text-center">aspiring software engineer</p>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
-                style="position: absolute; top: 58%; width: 100%; z-index: 1;">
+                style="position: absolute; top: 65%; width: 100%; z-index: 1;">
                 <defs>
-                    <linearGradient id="gradient" x1="90%" y1="70%" x2="80%" y2="100%">
-                        <stop offset="10%" style="stop-color:transparent;stop-opacity:1" />
-                        <stop offset="30%" style="stop-color:#1f2937;stop-opacity:1" />
+                    <linearGradient id="gradient" x1="10%" y1="-30%" x2="50%" y2="90%">
+                        <stop offset="0%" style="stop-color:black;stop-opacity:1" />
+                        <stop offset="90%" style="stop-color:#000033;stop-opacity:1" />
                     </linearGradient>
                 </defs>
-                <path fill="url(#gradient)" fill-opacity="1"
-                    d="M0,64L48,80C96,96,192,128,288,160C384,192,480,224,576,224C672,224,768,192,864,186.7C960,181,1056,203,1152,197.3C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                <path fill="url(#gradient)" fill-opacity="1" d="M0,160 Q480,320,960,160 T1440,160 L1440,320 L0,320 Z">
                 </path>
             </svg>
+
 
             <div class=" w-3/5">
                 <img src="images/My project.png" alt="Image" class="">
@@ -62,9 +62,9 @@
         </div>
     </div>
 
-    <div id="about" class="min-h-screen bg-fixed bg-cover bg-gray-800">
-        <div class="flex items-center pt-80">
-            <h1 class="uppercase text-5xl mb-9 font-body">about</h1>
+    <div id="about" class="min-h-screen bg-fixed bg-cover bg-primary-200">
+        <div class="flex items-center pt-72">
+            <h1 class="uppercase text-5xl mb-9 font-body text-white">about</h1>
             <div class="text-white font-body">
                 <p class="max-w-2xl leading-10">Hello! I'm David Calderon, a Computer Science student at Santa Ana
                     College, with a planned transfer to a university this upcoming year. As a
@@ -75,25 +75,19 @@
                     mentorship.
                 </p>
             </div>
+
         </div>
 
     </div>
-    <div class="min-h-screen bg-fixed bg-cover bg-blue-950">
+    <div id="skills" class="min-h-screen bg-fixed bg-cover bg-primary-300">
         <div class="flex pt-96 text-white text-5xl font-body uppercase">Skills</div>
     </div>
-    <div class="min-h-screen bg-fixed bg-cover bg-blue-800">
+    <div id="projects" class="min-h-screen bg-fixed bg-cover bg-primary-400">
         <div class="flex pt-96 text-white text-5xl font-body uppercase pl-96">projects</div>
     </div>
 
     <script>
-        // Smooth scrolling to the "about" section when the "about" link is clicked
-        document.querySelector('a[href="#about"]').addEventListener('click', function (e) {
-            e.preventDefault();
-            var aboutSection = document.getElementById('about');
-            aboutSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+
 
         // Smooth scrolling to the "home" section when the "home" link is clicked
         document.querySelector('a[href="#home"]').addEventListener('click', function (e) {
@@ -103,6 +97,33 @@
                 behavior: 'smooth'
             });
         });
+        // Smooth scrolling to the "about" section when the "about" link is clicked
+        document.querySelector('a[href="#about"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            var aboutSection = document.getElementById('about');
+            aboutSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+        // Smooth scrolling to the "skills" section when the "skills" link is clicked
+        document.querySelector('a[href="#skills"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            var skillsSection = document.getElementById('skills');
+            skillsSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling to the "projects" section when the "projects" link is clicked
+        document.querySelector('a[href="#projects"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            var projectsSection = document.getElementById('projects');
+            projectsSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+
     </script>
 </body>
 
