@@ -23,20 +23,29 @@
         style="background-image:url(images/istockphoto-1194080385-640x640.jpg)">
         <!--navbar start-->
         <nav id="navbar" class="flex fixed justify-between items-center w-full p-5 ">
-            <div class="text-white w-10 md:hidden ">
+            <div class="text-white w-10 md:hidden relative" id="dropdown-icon">
                 <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke-width="1.5" stroke="currentColor" class=" w-10 md:hidden cursor-pointer ">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </div>
-            <img src="images/letters white.png" alt="" class="w-20 md:w-32">
-            <ul class="hidden md:block md:flex  text-white font-body uppercase text-xl lg:text-3xl">
-                <li><a href="#home" class="px-5 xl:px-12">home</a></li>
-                <li><a href="#about" class="px-5 xl:px-12">about</a></li>
-                <li><a href="#skills" class="px-5 xl:px-12">skills</a></li>
-                <li><a href="#projects" class="px-5 xl:px-12">projects</a></li>
-            </ul>
+            <img src="images/letters white.png" alt="" class="w-20  lg:w-32 lg:p-2">
+
+            <div id="dropdown-content"
+                class="hidden md:block absolute bg-gray-700 mt-56 w-full left-0 md:relative md:mt-0 md:bg-transparent md:justify-end md:flex">
+                <ul class=" md:flex  text-white font-body uppercase text-xl lg:text-3xl ">
+                    <li class="py-2"><a href="#home" class=" p-5 xl:px-12 hover:text-primary-100 menu-item">home</a>
+                    </li>
+                    <li class="py-2"><a href="#about" class=" p-5 xl:px-12 hover:text-primary-100 menu-item">about</a>
+                    </li>
+                    <li class="py-2"><a href="#skills" class=" p-5 xl:px-12 hover:text-primary-100 menu-item">skills</a>
+                    </li>
+                    <li class="py-2"><a href="#projects"
+                            class=" p-5 xl:px-12 hover:text-primary-100 menu-item">projects</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <div
             class="min-h-screen flex flex-col items-center justify-center md:flex-row md:items-center md:justify-evenly">
@@ -44,7 +53,7 @@
                 <h1 class="pb-3 text-center text-3xl md:text-4xl xl:text-5xl">David Calderon</h1>
                 <p class="text-xs md:text-sm lg:text-base xl:text-xl">aspiring software engineer</p>
             </div>
-            <img src="images/My project.png" alt="Image" class="mt-32 w-full sm:w-5/12 lg:w-6/12">
+            <img src="images/My project.png" alt="Image" class="mt-32 w-full sm:w-10/12 md:w-4/12 lg:w-6/12 2xl:w-7/12">
         </div>
         <div class="w-full flex items-end">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -114,6 +123,16 @@
 
 
     <script>
+        window.addEventListener("scroll", function () {
+            var navbar = document.getElementById("navbar");
+            var windowPosition = window.scrollY > window.innerHeight / 8;
+
+            if (windowPosition) {
+                navbar.classList.add("bg-black");
+            } else {
+                navbar.classList.remove("bg-black");
+            }
+        });
         // Smooth scrolling to the "home" section when the "home" link is clicked
         document.querySelector('a[href="#home"]').addEventListener('click', function (e) {
             e.preventDefault();
@@ -146,39 +165,29 @@
                 behavior: 'smooth'
             });
         });
-        //menu dropdown
-        var dropdownMenu = document.getElementById('dropdown-menu');
-        var menuIcon = document.getElementById('menu-icon');
-        var menuLinks = document.querySelectorAll('.menu-link');
+        //dropdown menu
+        var dropdownIcon = document.getElementById("dropdown-icon");
+        dropdownIcon.addEventListener("click", toggleDropdown);
 
-        menuIcon.addEventListener('click', function () {
-            if (dropdownMenu.classList.contains('hidden')) {
-                dropdownMenu.classList.remove('hidden');
-                dropdownMenu.classList.remove('-translate-y-full');
-            } else {
-                dropdownMenu.classList.add('hidden');
-                dropdownMenu.classList.add('-translate-y-full');
+        // Function for toggling dropdown menu
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdown-content");
+            dropdownContent.classList.toggle('hidden');
+        }
+
+        // Function for hiding dropdown menu on large screens
+        window.addEventListener('resize', () => {
+            var dropdownContent = document.getElementById("dropdown-content");
+            if (window.innerWidth >= 768) {
+                dropdownContent.classList.add('hidden');
             }
         });
-
-        menuLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
-                dropdownMenu.classList.add('hidden');
-                dropdownMenu.classList.add('-translate-y-full');
-            });
+        // Make dropdown menu disappear when a menu item is clicked
+        var menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(function (menuItem) {
+            menuItem.addEventListener('click', toggleDropdown);
         });
-        window.addEventListener("scroll", function () {
-            var navbar = document.getElementById("navbar");
-            var windowPosition = window.scrollY > window.innerHeight / 8;
-            var phoneClass = document.getElementsByClassName("phone");
 
-            if (windowPosition) {
-                navbar.classList.add("bg-black");
-            } else if (phoneClass.length === 0) {
-                // Only remove bg-black if phone class is not present
-                navbar.classList.remove("bg-black");
-            }
-        });
 
     </script>
 </body>
