@@ -13,70 +13,41 @@
         href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="output.css">
-    <style>
-        .bg-black {
-            background-color: black;
-        }
 
-        @media(max-width:428px) {
-            .phone {
-                display: flex;
-                flex-direction: column;
-                font-size: 2rem;
-                line-height: 1;
-                padding-bottom: 132px;
-                width: auto;
-            }
-
-            .svg-responsive {
-                position: absolute;
-                top: 90%;
-                width: 100%;
-                z-index: 1;
-            }
-
-            .bg-black {}
-
-        }
-    </style>
 
 </head>
 
 <body>
 
     <!--background image wrap-->
-    <div class="min-h-screen bg-cover bg-no-repeat "
+    <div id="home" class="min-h-screen bg-cover bg-no-repeat "
         style="background-image:url(images/istockphoto-1194080385-640x640.jpg)">
         <!--navbar start-->
-        <nav id="navbar" class="flex justify-between items-center fixed font-body p-5 w-full z-10">
-            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="text-white w-10 md:hidden cursor-pointer">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-            <img src="images/letters white.png" alt="" class="w-16">
-            <div id="dropdown-menu"
-                class="absolute left-0 transform translate-y-28 w-full hidden transition-transform duration-200 ease-in bg-gray-600">
-                <ul class="space-y-2 text-white uppercase">
-                    <li><a href="#home" class="block px-2 py-1 menu-link">home</a></li>
-                    <li><a href="#about" class="block px-2 py-1 menu-link">about</a></li>
-                    <li><a href="#skills" class="block px-2 py-1 menu-link">skills</a></li>
-                    <li><a href="#projects" class="block px-2 py-1 menu-link">projects</a></li>
-                </ul>
+        <nav id="navbar" class="flex fixed justify-between items-center w-full p-5 ">
+            <div class="text-white w-10 md:hidden ">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class=" w-10 md:hidden cursor-pointer ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
             </div>
-
+            <img src="images/letters white.png" alt="" class="w-20 lg:w-24">
+            <ul class="hidden md:block md:flex  text-white font-body uppercase text-xl lg:text-3xl">
+                <li><a href="#home" class="px-5 xl:px-12">home</a></li>
+                <li><a href="#about" class="px-5 xl:px-12">about</a></li>
+                <li><a href="#skills" class="px-5 xl:px-12">skills</a></li>
+                <li><a href="#projects" class="px-5 xl:px-12">projects</a></li>
+            </ul>
         </nav>
-
-
-
-
-        <div id="home" class="relative overflow-hidden flex items-center justify-end gap-10 h-screen phone">
-            <div class="text-white tracking-widest font-body phone">
-                <h1 class=" lg:text-5xl mb-5 ">David Calderon</h1>
-                <p class="uppercase text-center text-xs">aspiring software engineer</p>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg-responsive">
+        <div class="min-h-screen flex flex-col items-center justify-center ">
+            <h1 class=" text-center text-white uppercase font-body tracking-widest text-2xl p-2">David Calderon</h1>
+            <p class="text-xs text-white uppercase font-body">aspiring software engineer</p>
+            <img src="images/My project.png" alt="Image" class="mt-32">
+        </div>
+        <div class="flex w-96 items-end">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <defs>
-                    <linearGradient id="gradient-1" gradientTransform="rotate(0)" x1="10%" y1="-30%" x2="50%" y2="90%">
+                    <linearGradient id="gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" style="stop-color:black;stop-opacity:1" />
                         <stop offset="90%" style="stop-color:#000033;stop-opacity:1" />
                     </linearGradient>
@@ -84,14 +55,11 @@
                 <path fill="url(#gradient-1)" fill-opacity="1" d="M0,160 Q480,320,960,160 T1440,160 L1440,320 L0,320 Z">
                 </path>
             </svg>
-            <div class="w-96 lg:w-3/5 phone">
-                <img src="images/My project.png" alt="Image">
-            </div>
         </div>
 
     </div>
 
-    <div id="about" class="min-h-screen bg-primary-200 flex items-center justify-between border-2 border-red-700">
+    <div id="about" class="min-h-screen bg-primary-200 flex items-center justify-between">
         <div class="rounded-x" style="z-index: 2;">
             <img src="" alt="">
         </div>
@@ -108,7 +76,7 @@
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
-            style="position: absolute; top: 167%; width: 99%; z-index: 1;" class="overflow-hidden">
+            style="position: absolute; top: 167%; width: 100%; z-index: 1;" class="overflow-hidden">
             <defs>
                 <linearGradient id="gradient-2" gradientTransform="rotate(85)" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" style="stop-color:#000033;stop-opacity:1" />
@@ -120,7 +88,7 @@
             </path>
         </svg>
     </div>
-
+    <!---
 
     <div id="skills" class=" overflow-hidden min-h-screen bg-fixed bg-cover bg-primary-300">
         <div class="">Skills</div>
@@ -140,9 +108,9 @@
     <div id="projects" class="min-h-screen bg-fixed bg-cover bg-primary-400">
         <div class="">projects</div>
     </div>
+-->
 
 
-    </footer>
     <script>
         // Smooth scrolling to the "home" section when the "home" link is clicked
         document.querySelector('a[href="#home"]').addEventListener('click', function (e) {
