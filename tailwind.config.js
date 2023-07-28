@@ -3,6 +3,9 @@ module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
     extend: {
+      lineHeight: {
+        'extra-loose': '2.8rem',
+      },
       colors: {
         primary: {
           100: '#F2F0CE',
