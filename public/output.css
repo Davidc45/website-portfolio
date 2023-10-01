@@ -846,6 +846,18 @@ video {
   line-height: 1.75rem;
 }
 
+.leading-10{
+  line-height: 2.5rem;
+}
+
+.leading-5{
+  line-height: 1.25rem;
+}
+
+.leading-6{
+  line-height: 1.5rem;
+}
+
 .tracking-widest{
   letter-spacing: 0.1em;
 }
@@ -863,6 +875,36 @@ video {
 .hover\:text-primary-100:hover{
   --tw-text-opacity: 1;
   color: rgb(242 240 206 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-950:hover{
+  --tw-text-opacity: 1;
+  color: rgb(23 37 84 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-300:hover{
+  --tw-text-opacity: 1;
+  color: rgb(147 197 253 / var(--tw-text-opacity));
+}
+
+.hover\:text-orange-400:hover{
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity));
+}
+
+.hover\:text-orange-300:hover{
+  --tw-text-opacity: 1;
+  color: rgb(253 186 116 / var(--tw-text-opacity));
+}
+
+.hover\:text-orange-100:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 237 213 / var(--tw-text-opacity));
+}
+
+.hover\:text-orange-200:hover{
+  --tw-text-opacity: 1;
+  color: rgb(254 215 170 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px){
@@ -999,6 +1041,25 @@ video {
   .lg\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .lg\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:leading-loose{
+    line-height: 2;
   }
 }
 
