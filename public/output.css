@@ -846,18 +846,6 @@ video {
   line-height: 1.75rem;
 }
 
-.leading-10{
-  line-height: 2.5rem;
-}
-
-.leading-5{
-  line-height: 1.25rem;
-}
-
-.leading-6{
-  line-height: 1.5rem;
-}
-
 .tracking-widest{
   letter-spacing: 0.1em;
 }
@@ -872,24 +860,13 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.hover\:text-primary-100:hover{
-  --tw-text-opacity: 1;
-  color: rgb(242 240 206 / var(--tw-text-opacity));
+.hover\:border-2:hover{
+  border-width: 2px;
 }
 
-.hover\:text-blue-950:hover{
-  --tw-text-opacity: 1;
-  color: rgb(23 37 84 / var(--tw-text-opacity));
-}
-
-.hover\:text-blue-300:hover{
-  --tw-text-opacity: 1;
-  color: rgb(147 197 253 / var(--tw-text-opacity));
-}
-
-.hover\:text-orange-400:hover{
-  --tw-text-opacity: 1;
-  color: rgb(251 146 60 / var(--tw-text-opacity));
+.hover\:border-white:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .hover\:text-orange-300:hover{
@@ -897,14 +874,49 @@ video {
   color: rgb(253 186 116 / var(--tw-text-opacity));
 }
 
-.hover\:text-orange-100:hover{
+.hover\:text-yellow-300:hover{
   --tw-text-opacity: 1;
-  color: rgb(255 237 213 / var(--tw-text-opacity));
+  color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 
-.hover\:text-orange-200:hover{
+.hover\:text-blue-200:hover{
   --tw-text-opacity: 1;
-  color: rgb(254 215 170 / var(--tw-text-opacity));
+  color: rgb(191 219 254 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-100:hover{
+  --tw-text-opacity: 1;
+  color: rgb(219 234 254 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-600:hover{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.hover\:text-amber-300:hover{
+  --tw-text-opacity: 1;
+  color: rgb(252 211 77 / var(--tw-text-opacity));
+}
+
+.hover\:text-purple-950:hover{
+  --tw-text-opacity: 1;
+  color: rgb(59 7 100 / var(--tw-text-opacity));
+}
+
+.hover\:text-purple-400:hover{
+  --tw-text-opacity: 1;
+  color: rgb(192 132 252 / var(--tw-text-opacity));
+}
+
+.hover\:text-black:hover{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.hover\:text-purple-700:hover{
+  --tw-text-opacity: 1;
+  color: rgb(126 34 206 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px){
@@ -1028,6 +1040,11 @@ video {
     padding: 0.5rem;
   }
 
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .lg\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1041,16 +1058,6 @@ video {
   .lg\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .lg\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .lg\:text-lg{
